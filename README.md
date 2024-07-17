@@ -1,16 +1,11 @@
-Tip Calculator
+Hello, World! 🌍
 
-Welcome to the Tip Calculator! This is a simple Python script that helps you calculate how much each person should pay when splitting a bill, including a tip.
+Welcome to My GitHub Repository! About Me I'm Athul, a passionate learner and aspiring Software Engineer based in India. With a background in Computer Applications and experienced in system engineering, I'm transitioning into full-stack development with a focus on Python and beyond.
 
-Features:
+What You'll Find Here Projects: I love creating practical applications that solve real-world problems. You'll find a variety of projects here showcasing my understanding of topics i learned the day in Python. Learning Journey: Follow along as I document my progress in mastering Python and advancing my coding skills. From beginner tutorials to complex projects, every step is a learning experience.
 
-Calculates the total bill including a tip.
-Splits the total bill between a specified number of people.
-Rounds the result to 2 decimal places for convenience.
+Let's Connect! LinkedIn: Connect with me on LinkedIn
 
-How It Works:
+Get in Touch I'm always open to collaboration and learning opportunities. Whether you have feedback, project ideas, or just want to connect, feel free to reach out!
 
-The script prompts you to enter the total bill amount.
-It then asks how much tip you would like to give (choose from 10%, 12%, or 15%).
-Finally, it asks how many people the bill should be split between.
-The script calculates the total bill including the tip, splits it between the number of people, and displays how much each person should pay.
+Thank You! Thank you for visiting my GitHub profile. Let's learn, innovate, and build together!
