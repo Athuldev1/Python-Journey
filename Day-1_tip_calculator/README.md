@@ -1,16 +1,18 @@
-Tip Calculator!
+# Band Name Generator
 
-Welcome to the Tip Calculator! This is a simple Python script that helps you calculate how much each person should pay when splitting a bill, including a tip.
+Welcome to the Band Name Generator! This simple program generates a fun band name based on the name of the city you grew up in and your pet's name.
 
-Features:
+## Description
 
-Calculates the total bill including a tip.
-Splits the total bill between a specified number of people.
-Rounds the result to 2 decimal places for convenience.
+The Band Name Generator is a basic Python script that takes user input and combines it to create a unique and amusing band name. This project is perfect for beginners learning Python and working with basic input and output functions.
 
-How It Works?
+## How It Works
 
-The script prompts you to enter the total bill amount.
-It then asks how much tip you would like to give (choose from 10%, 12%, or 15%).
-Finally, it asks how many people the bill should be split between.
-The script calculates the total bill including the tip, splits it between the number of people, and displays how much each person should pay.
+1. The program welcomes the user.
+2. It prompts the user to enter the name of the city they grew up in.
+3. It then asks the user to input their pet's name.
+4. Finally, it combines the two inputs and displays the generated band name.
+
+
+
+
