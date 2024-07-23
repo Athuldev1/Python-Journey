@@ -1,0 +1,22 @@
+players = [
+    "Lionel Messi",
+    "Cristiano Ronaldo",
+    "Neymar Jr.",
+    "Kylian Mbappé",
+    "Robert Lewandowski",
+    "Kevin De Bruyne",
+    "Mohamed Salah",
+    "Virgil van Dijk",
+    "Sergio Ramos",
+    "Luka Modrić",
+    "Harry Kane",
+    "Karim Benzema",
+    "Sadio Mané",
+    "Paul Pogba",
+    "Eden Hazard",
+    "Erling Haaland",
+    "Ngolo Kanté",
+    "Raheem Sterling",
+    "Antoine Griezmann",
+    "Zlatan Ibrahimović"
+]
