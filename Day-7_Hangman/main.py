@@ -1,31 +1,35 @@
-import random
 import os
+import random
 from hangman_art import stages, logo
 from hangman_words import players
 
-
-lives = 6
-
-
-
 print(logo)
 chosen_word = random.choice(players).lower()
-print(f"Pssst, the solution is {chosen_word}.")
+# print(f"Pssst, the solution is {chosen_word}") for debugging
 
-display = ["_"] * len(chosen_word)
+# Display blanks and handle spaces
+display = []
+for char in chosen_word:
+    if char == " ":
+        display.append(" ")
+    else:
+        display.append("_")
+
 print(" ".join(display))
 
+lives = 6
 is_game_over = False
+
+# Game loop
 while not is_game_over and lives > 0:
     user_guess = input("Enter your guess: ").lower()
     # Clear screen
     os.system("cls" if os.name == "nt" else "clear")
 
     if user_guess in display:
-        print(f"The letter {user_guess}is already guessed. Guess different letter")
-
+        print(f"The letter '{user_guess}' is already guessed. Guess different letter")
+        continue
     guess_correct = False
-
     for index, letter in enumerate(chosen_word):
         if letter == user_guess:
             display[index] = letter
