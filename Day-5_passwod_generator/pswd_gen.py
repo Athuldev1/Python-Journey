@@ -80,4 +80,4 @@ for _ in range(nr_symbols):
 
 random.shuffle(password)
 password_str = " ".join(password)
-print(f"Your password is: {password_str}")
+print(f"Your password is {password_str}")
