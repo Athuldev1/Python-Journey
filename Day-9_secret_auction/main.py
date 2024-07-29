@@ -3,6 +3,19 @@ import os
 
 print(logo)
 
+def auction_bid(bids):
+    # Initialize the highest bid
+    highest_bid = bids[0]
+
+    # Iterate through the bids to find the highest
+    for bid in bids:
+        if bid["price"] > highest_bid["price"]:
+            highest_bid = bid
+
+    print(
+        f"The highest bid is by {highest_bid['name']} with a bid of ${highest_bid['price']}"
+    )
+    
 is_bid_done = False
 bids = []
 
@@ -38,20 +51,7 @@ while not is_bid_done:
         os.system("cls" if os.name == "nt" else "clear")
     elif next_person == "no":
         is_bid_done = True
+        auction_bid(bids)
 
 
-def auction_bid(bids):
-    # Initialize the highest bid
-    highest_bid = bids[0]
 
-    # Iterate through the bids to find the highest
-    for bid in bids:
-        if bid["price"] > highest_bid["price"]:
-            highest_bid = bid
-
-    print(
-        f"The highest bid is by {highest_bid['name']} with a bid of ${highest_bid['price']}"
-    )
-
-
-auction_bid(bids)
