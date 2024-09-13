@@ -15,7 +15,6 @@ def remove_task():
     title = input("Enter the task title to remove: ")
 
     # Filter tasks to exclude the one with the given title
-    global tasks
     updated_tasks = [task for task in tasks if task["title"] != title]
 
     # Check if any tasks were removed
@@ -34,6 +33,7 @@ def update_task():
             new_description = input("Enter the new description: ")
             task["description"] = new_description
             new_status = input("Update your status: ")
+            task["status"] = new_status
             print(f"Task '{title}' updated successfully.")
             return
     print(f"{title.capitalize()} not found")
@@ -44,13 +44,11 @@ def display_task():
     if not tasks:
         print("There are no tasks available")
     else:
-        print("\n Current Tasks")
+        print("\nCurrent Tasks:")
         for i, task in enumerate(tasks, 1):
             print(
-                f"{i}.Title: {
-                    task['title']}\n Description: {
-                    task['description']}\n Status: {
-                    task['status']}")
+                f"{i}. Title: {task['title']}\n   Description: {task['description']}\n   Status: {task['status']}\n"
+            )
 
 
 def mark_completed_task():

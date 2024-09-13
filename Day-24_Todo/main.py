@@ -11,7 +11,11 @@ def main_menu():
     print("5. Mark Task as Completed")
     print("6. Exit")
 
-    choice = input("Enter your choice (1-6): ")
+    try:
+        choice = input("Enter your choice (1-6): ")
+    except ValueError:
+        print("Invalid input. Please enter a number between 1 and 6.")
+        return
 
     if choice == "1":
         add_task()
