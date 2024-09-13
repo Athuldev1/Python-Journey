@@ -47,8 +47,10 @@ def display_task():
         print("\n Current Tasks")
         for i, task in enumerate(tasks, 1):
             print(
-                f"{i}.Title: {task['title']}\n Description: {task['description']}\n Status: {task['status']}"
-            )
+                f"{i}.Title: {
+                    task['title']}\n Description: {
+                    task['description']}\n Status: {
+                    task['status']}")
 
 
 def mark_completed_task():
