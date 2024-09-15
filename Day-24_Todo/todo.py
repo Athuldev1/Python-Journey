@@ -13,16 +13,14 @@ def add_task():
 def remove_task():
     """Remove a task from the list."""
     title = input("Enter the task title to remove: ")
-
-    # Filter tasks to exclude the one with the given title
     updated_tasks = [task for task in tasks if task["title"] != title]
 
-    # Check if any tasks were removed
     if len(updated_tasks) == len(tasks):
         print("There are no active tasks with the specified title.")
     else:
-        tasks = updated_tasks
+        tasks[:] = updated_tasks 
         print(f"Task '{title}' removed successfully.")
+
 
 
 def update_task():
