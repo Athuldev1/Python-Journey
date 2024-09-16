@@ -1,4 +1,11 @@
-from todo import add_task, remove_task, update_task, display_task, mark_completed_task
+from todo import (
+    add_task,
+    remove_task,
+    update_task,
+    display_task,
+    mark_completed_task,
+    search_task,
+)
 
 
 def main_menu():
@@ -9,12 +16,13 @@ def main_menu():
     print("3. Update Task")
     print("4. Display Tasks")
     print("5. Mark Task as Completed")
-    print("6. Exit")
+    print("6. Search Task")
+    print("7. Exit")
 
-    try:
-        choice = input("Enter your choice (1-6): ")
-    except ValueError:
-        print("Invalid input. Please enter a number between 1 and 6.")
+    choice = input("Enter your choice (1-7): ").strip()
+
+    if choice not in map(str, range(1, 8)):
+        print("Invalid input. Please enter a number between 1 and 7.")
         return
 
     if choice == "1":
@@ -28,8 +36,10 @@ def main_menu():
     elif choice == "5":
         mark_completed_task()
     elif choice == "6":
+        search_task()
+    elif choice == "7":
         print("Exiting...")
-        exit()
+        return
     else:
         print("Invalid choice. Please try again.")
 
