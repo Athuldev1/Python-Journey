@@ -59,6 +59,28 @@ def save():
             password_entry.delete(0, END)
 
 
+# ---------------------------- Search password ------------------------------- #
+def search_password():
+    website = website_entry.get()
+    try:
+        with open("data.json") as datafile:
+            data = json.load(datafile)
+    except FileNotFoundError:
+        messagebox.showinfo(title="Error", message="File doesn't exist")
+    else:
+        if website in data:
+            email = data[website]["email"]
+            password = data[website]["password"]
+            messagebox.showinfo(
+                title=website, message=f"Email:{email}\nPassword:{password}"
+            )
+        else:
+            messagebox.showinfo(
+                title="Error",
+                message=f"No details found for '{website}' in the system.",
+            )
+
+
 # ---------------------------- UI SETUP ------------------------------- #
 window = Tk()
 window.title("Password Manager")
@@ -72,8 +94,8 @@ canvas.grid(row=0, column=1)
 # Labels and Entries
 website_label = Label(text="Website:")
 website_label.grid(column=0, row=1)
-website_entry = Entry(width=35)
-website_entry.grid(column=1, row=1, columnspan=2, sticky="EW")
+website_entry = Entry(width=21)
+website_entry.grid(column=1, row=1, sticky="EW")
 website_entry.focus()
 
 email_label = Label(text="Email:")
@@ -84,14 +106,17 @@ email_entry.insert(0, "athulkp@gmail.com")
 
 password_label = Label(text="Password:")
 password_label.grid(column=0, row=3)
-password_entry = Entry(width=35)
+password_entry = Entry(width=21)
 password_entry.grid(column=1, row=3, columnspan=2, sticky="EW")
 
 # Buttons
 password_button = Button(text="Generate Password", command=generate_password)
-password_button.grid(column=2, row=3, sticky="EW", padx=5, pady=5)
+password_button.grid(column=2, row=3, sticky="EW")
 
 add_button = Button(text="Add", width=36, command=save)
 add_button.grid(column=1, row=4, columnspan=2, sticky="EW", padx=5, pady=5)
+
+search_button = Button(text="Search", width=13, command=search_password)
+search_button.grid(column=2, row=1, sticky="EW", padx=5, pady=5)
 
 window.mainloop()
